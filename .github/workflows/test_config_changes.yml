@@ -1,0 +1,42 @@
+name: Test Configuration Changes
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest
+
+    - name: Generate configuration files (before and after change)
+      run: |
+        # You can manually add or modify the configuration files as needed.
+        # Here we just copy them for testing
+        echo "parameter1=value1" > config/config_file_before_change.txt
+        echo "parameter2=value2" >> config/config_file_before_change.txt
+
+        echo "parameter1=value1" > config/config_file_after_change.txt
+        echo "parameter2=value2" >> config/config_file_after_change.txt
+        echo "parameter3=value3" >> config/config_file_after_change.txt
+
+    - name: Run pytest tests
+      run: |
+        pytest tests/test_config_changes.py
