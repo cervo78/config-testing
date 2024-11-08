@@ -13,7 +13,7 @@ on:
     paths:
       - 'config/**/*'         # Only run if files in the config directory change
       - 'tests/**/*'          # Only run if files in the tests directory change
-
+  workflow_dispatch:  # Allows manual triggering
 jobs:
   test:
     runs-on: ubuntu-latest
