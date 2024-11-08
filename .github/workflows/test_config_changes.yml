@@ -34,14 +34,9 @@ jobs:
 
     - name: Generate configuration files (before and after change)
       run: |
-        # You can manually add or modify the configuration files as needed.
-        # Here we just copy them for testing
-        echo "parameter1=value1" > config/config_file_before_change.txt
-        echo "parameter2=value2" >> config/config_file_before_change.txt
-
-        echo "parameter1=value1" > config/config_file_after_change.txt
-        echo "parameter2=value2" >> config/config_file_after_change.txt
-        echo "parameter3=value3" >> config/config_file_after_change.txt
+        # Assuming the configuration file is already present in the repository
+        cat config/config_file_before_change.txt
+        cat config/config_file_after_change.txt
 
     - name: Run pytest tests
       run: |
