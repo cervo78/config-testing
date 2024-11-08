@@ -11,6 +11,6 @@ def test_config_changes():
     after_config = read_file("config/config_file_after_change.txt")
 
     # Assert expected changes (for example, IP address and route)
-    assert "ip address 192.168.2.1" in after_config  # Check for changed IP
+    assert "ip address 192.168.2.1" in after_config  # Check for changed IP before and afeter
     assert "ip route 0.0.0.0 0.0.0.0 192.168.1.254" in after_config  # Check for new route
     assert "ip address 192.168.1.1" not in after_config  # Ensure old IP is not present
