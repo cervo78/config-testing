@@ -22,7 +22,7 @@ jobs:
 
     - name: Run deployment script
       run: |
-        python deploy_config.py | tee deployment.log
+        python config/manual_wf/deploy_config.py | tee deployment.log
 
     - name: Upload deployment logs
       uses: actions/upload-artifact@v4
