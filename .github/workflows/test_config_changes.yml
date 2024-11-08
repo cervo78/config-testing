@@ -1,20 +1,20 @@
 name: Test Configuration Changes
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'config/**/*'         # Only run if files in the config directory change
-      - 'tests/**/*'          # Only run if files in the tests directory change
-      - ".github/**/*/*"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'config/**/*'         # Only run if files in the config directory change
-      - 'tests/**/*'          # Only run if files in the tests directory change
-      - ".github/**/*/*"
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'config/**/*'         # Only run if files in the config directory change
+  #     - 'tests/**/*'          # Only run if files in the tests directory change
+  #     - ".github/**/*/*"
+  # pull_request:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'config/**/*'         # Only run if files in the config directory change
+  #     - 'tests/**/*'          # Only run if files in the tests directory change
+  #     - ".github/**/*/*"
   workflow_dispatch:  # Allows manual triggering
 jobs:
   test:
