@@ -40,4 +40,10 @@ jobs:
 
     - name: Run pytest tests
       run: |
-        pytest tests/test_config_changes.py
+        pytest tests/test_config_changes.py --junitxml=reports/test-results.xml # save result
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v2 # if i am not using artifact then report/results are not accessible after workflow is completed
+      with:
+        name: test-results
+        path: reports/test-results.xml
