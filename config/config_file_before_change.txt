@@ -1,2 +1,6 @@
-parameter1=value1
-parameter2=value2
+hostname Router1
+interface GigabitEthernet0/1
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+exit
+
