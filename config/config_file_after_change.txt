@@ -1,3 +1,7 @@
-parameter1=bla
-parameter2=bla
-parameter3=bla
+hostname Router1
+interface GigabitEthernet0/1
+ ip address 192.168.2.1 255.255.255.0  # Changed IP
+ no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 192.168.1.254  # New route added
+
