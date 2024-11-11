@@ -1,1 +1,1 @@
- API_KEY= API_KEY=test workflow_var=Workflow_var_test
+ API_KEY= API_KEY=test workflow_var=Workflow_var_test jobs_var=Test_Jobs_Var
